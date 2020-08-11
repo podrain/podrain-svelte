@@ -1,40 +1,43 @@
-<div class="p-3">
-  <h1 class="text-xl text-center">Settings</h1>
+<Layout>
+  <div class="p-3">
+    <h1 class="text-xl text-center">Settings</h1>
 
-  <span>Proxy URL</span>
-  <input type="text" class="w-full p-1 mt-1 text-black" bind:value={proxyURL}>
-  <button on:click={addProxyURL} class="w-full bg-green-500 h-8">
-    <i class="fas fa-save mr-3"></i>
-    Save
-  </button>
+    <span>Proxy URL</span>
+    <input type="text" class="w-full p-1 mt-1 text-black" bind:value={proxyURL}>
+    <button on:click={addProxyURL} class="w-full bg-green-500 h-8">
+      <i class="fas fa-save mr-3"></i>
+      Save
+    </button>
 
-  <button on:click={downloadBackup} class="mt-6 bg-purple-600 p-1 mr-1 w-full">
-    <i class="fas fa-download mr-3"></i>
-    Download backup
-  </button>
+    <button on:click={downloadBackup} class="mt-6 bg-purple-600 p-1 mr-1 w-full">
+      <i class="fas fa-download mr-3"></i>
+      Download backup
+    </button>
 
-  <h2 class="mt-3">Restore backup</h2>
-  <input on:change={(e) => {
-    restoreFile = e.target.files[0]
-  }} type="file" class="mt-1">
+    <h2 class="mt-3">Restore backup</h2>
+    <input on:change={(e) => {
+      restoreFile = e.target.files[0]
+    }} type="file" class="mt-1">
 
-  {#if restoreFile}
-  <button on:click={restoreBackup} class="bg-orange-600 p-1 mr-1 w-full mt-3">
-    {#if restoring}
-      <div class="fas fa-spinner fa-spin mr-3"></div>
-    {:else}
-      <i class="fas fa-upload mr-3"></i>
+    {#if restoreFile}
+    <button on:click={restoreBackup} class="bg-orange-600 p-1 mr-1 w-full mt-3">
+      {#if restoring}
+        <div class="fas fa-spinner fa-spin mr-3"></div>
+      {:else}
+        <i class="fas fa-upload mr-3"></i>
+      {/if}
+      {#if restoreStatus}
+        {restoreStatus}
+      {:else}
+        Restore backup
+      {/if}
+    </button>
     {/if}
-    {#if restoreStatus}
-      {restoreStatus}
-    {:else}
-      Restore backup
-    {/if}
-  </button>
-  {/if}
-</div>
+  </div>
+</Layout>
 
 <script>
+  import Layout from './Layout.svelte'
   import State from '../js/State'
   import FileSaver from 'file-saver'
 
