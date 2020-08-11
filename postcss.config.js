@@ -3,6 +3,7 @@ module.exports = {
     // ...
     require('tailwindcss'),
     require('autoprefixer'),
+    require('postcss-input-range'),
     // ...
   ]
 }

@@ -8,9 +8,11 @@
   <div class="flex-1 overflow-y-scroll bg-gray-800 text-white">
     <slot></slot>
   </div>
+  <Playbox />
 </div>
 
 <script>
   import App from './App.svelte'
   import { push } from 'svelte-spa-router'
+  import Playbox from './Playbox.svelte'
 </script>
