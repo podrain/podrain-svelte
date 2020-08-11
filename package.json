@@ -9,8 +9,8 @@
     "dexie": "^3.0.2",
     "file-saver": "^2.0.2",
     "localforage": "^1.9.0",
+    "page": "^1.11.6",
     "svelte": "^3.24.1",
-    "svelte-spa-router": "^2.2.0",
     "tailwindcss": "^1.6.2"
   }
 }
