@@ -35,7 +35,7 @@
             </div>
             <div class="flex mt-3">
               <div class="w-1/5">
-                <img src="{ep.imageURL}" alt="">
+                <img src="{ep.imageURL || podcast.meta.imageURL}" alt="">
               </div>
               <div class="w-4/5 text-xs font-light ml-3">
                 {Helpers.cleanHTMLString(ep.description).substr(0, 125) + '...'}
