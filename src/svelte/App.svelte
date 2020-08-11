@@ -19,7 +19,7 @@
     Settings
   }
 
-  let currentPage = pages['PodcastList']
+  let currentPage = pages['Settings']
 
   function changePage(newPage) {
     currentPage = pages[newPage]
