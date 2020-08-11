@@ -1,5 +1,9 @@
 {#if expanded}
-<div class="h-48 bg-gray-200 p-3 flex flex-col justify-between">
+<div 
+  in:slide="{{ delay: 100, duration: 300 }}" 
+  out:slide="{{ duration: 300 }}" 
+  class="h-48 bg-gray-200 p-3 flex flex-col justify-between"
+>
   <div class="flex justify-between">
     <div class="flex flex-col w-4/5">
       <div class="w-full text-gray-800 text-sm">
@@ -37,6 +41,8 @@
 </div>
 {:else}
 <div 
+  in:slide="{{ delay: 300, duration: 100 }}"
+  out:slide="{{ duration: 100 }}"
   on:click={() => { expanded = true }}
   class="h-12 bg-gray-200 flex items-center justify-center"
 >
@@ -45,5 +51,6 @@
 {/if}
 
 <script>
+  import { slide } from 'svelte/transition'
   let expanded = true
 </script>
