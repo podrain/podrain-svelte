@@ -19,7 +19,7 @@
   }} type="file" class="mt-1">
 
   {#if restoreFile}
-  <button on:click={restoreBackup} class="bg-orange-600 p-1 text-white mr-1 w-full mt-3">
+  <button on:click={restoreBackup} class="bg-orange-600 p-1 mr-1 w-full mt-3">
     {#if restoring}
       <div class="fas fa-spinner fa-spin mr-3"></div>
     {:else}
