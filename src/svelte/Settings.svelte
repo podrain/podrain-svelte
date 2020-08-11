@@ -35,7 +35,6 @@
 </div>
 
 <script>
-  import Layout from './Layout.svelte'
   import State from '../js/State'
   import FileSaver from 'file-saver'
 

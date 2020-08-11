@@ -12,7 +12,6 @@
 </div>
 
 <script>
-  import Layout from './Layout.svelte'
   import PodcastList from './PodcastList.svelte'
   import Settings from './Settings.svelte'
   import PodcastShow from './PodcastShow.svelte'

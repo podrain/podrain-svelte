@@ -15,7 +15,6 @@
 
 <script>
   import State from '../js/State'
-  import Layout from './Layout.svelte'
 
   let podcasts = []
   let loading = false
